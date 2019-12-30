@@ -53,7 +53,6 @@ public class LineDrawEx extends JFrame {
     JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
     int returnValue ;
 	public LineDrawEx(){
-		
 		createMenu();
 		setContentPane(Mypanel);
 		setSize(500,500);
@@ -63,7 +62,7 @@ public class LineDrawEx extends JFrame {
 	
     void createMenu() {
     	MenuActionListener listener = new MenuActionListener(); 
-    	String[] DrawItemS = {"Line","Circle","Square","DrawMyself"};
+    	String[] DrawItemS = {"Line","Circle","Square","Draw"};
     	String[] FileItems = {"Delete","Copy&Paste","Drag&Drop","Save","Load","Exit"};
     	String[] EraseItems = {"Erase","ObjectErase"};
     	String[] ThickItems = {"10","20","30"};
@@ -143,7 +142,7 @@ public class LineDrawEx extends JFrame {
     				if(copy != 0) copy = 0;
     				if(color == b) color = Color.BLACK;
     				break; //2
-    			case "DrawMyself" : check = 3;
+    			case "Draw" : check = 3;
     				if(number != -1) number = -1;
     				if(copy != 0) copy = 0;
     				if(color == b) color = Color.BLACK;
